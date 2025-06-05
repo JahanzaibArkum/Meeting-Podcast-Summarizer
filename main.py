@@ -15,34 +15,58 @@ client = Groq(api_key=GROQ_API_KEY)
 # Custom CSS
 st.markdown("""
 <style>
-    body { color: #E0E0E0; background-color: #1E1E1E; }
-    .stApp { background-color: #1E1E1E; }
-    h1, h2, h3 { color: #BB86FC; }
-    .stButton>button {
+    /* App background */
+    .stApp {
+        background-color: #1E1E1E;
+        color: #E0E0E0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Page background fix */
+    html, body, [class*="st"] {
+        background-color: #1E1E1E !important;
+    }
+
+    /* Headings */
+    h1, h2, h3 {
+        color: #BB86FC;
+    }
+
+    /* Buttons */
+    .stButton > button {
         color: #1E1E1E;
         background-color: #BB86FC;
         border: none;
-        border-radius: 4px;
+        border-radius: 8px;
         padding: 0.5rem 1rem;
         font-weight: bold;
+        transition: background-color 0.3s ease;
     }
-    .stButton>button:hover { background-color: #A66EFC; }
+    .stButton > button:hover {
+        background-color: #A66EFC;
+    }
+
+    /* File uploader */
     .stFileUploader {
         background-color: #2E2E2E;
         border: 1px solid #BB86FC;
-        border-radius: 4px;
+        border-radius: 8px;
         padding: 1rem;
     }
+
+    /* Audio player */
     .stAudio {
         background-color: #2E2E2E;
-        border-radius: 4px;
+        border-radius: 8px;
         padding: 0.5rem;
     }
+
+    /* Text area */
     .stTextArea textarea {
         background-color: #2E2E2E;
         color: #E0E0E0;
         border: 1px solid #BB86FC;
-        border-radius: 4px;
+        border-radius: 8px;
     }
 </style>
 """, unsafe_allow_html=True)
