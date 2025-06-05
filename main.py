@@ -15,27 +15,22 @@ client = Groq(api_key=GROQ_API_KEY)
 # Custom CSS
 st.markdown("""
 <style>
-    /* App background */
-    .stApp {
-        background-color: #1E1E1E;
-        color: #E0E0E0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    /* Page background fix */
+    /* Full page background */
     html, body, [class*="st"] {
-        background-color: #1E1E1E !important;
+        background-color: #ADD8E6 !important;  /* Light blue background */
+        color: #1A1A1A;  /* Dark text */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     /* Headings */
     h1, h2, h3 {
-        color: #BB86FC;
+        color: #0A3D62;  /* Darker blue for headings */
     }
 
     /* Buttons */
     .stButton > button {
-        color: #1E1E1E;
-        background-color: #BB86FC;
+        color: #FFFFFF;
+        background-color: #0A3D62;
         border: none;
         border-radius: 8px;
         padding: 0.5rem 1rem;
@@ -43,29 +38,36 @@ st.markdown("""
         transition: background-color 0.3s ease;
     }
     .stButton > button:hover {
-        background-color: #A66EFC;
+        background-color: #064273;
     }
 
     /* File uploader */
     .stFileUploader {
-        background-color: #2E2E2E;
-        border: 1px solid #BB86FC;
+        background-color: #B0E0E6;
+        border: 1px solid #0A3D62;
         border-radius: 8px;
         padding: 1rem;
     }
 
     /* Audio player */
     .stAudio {
-        background-color: #2E2E2E;
+        background-color: #B0E0E6;
         border-radius: 8px;
         padding: 0.5rem;
     }
 
     /* Text area */
     .stTextArea textarea {
-        background-color: #2E2E2E;
-        color: #E0E0E0;
-        border: 1px solid #BB86FC;
+        background-color: #FFFFFF;
+        color: #1A1A1A;
+        border: 1px solid #0A3D62;
+        border-radius: 8px;
+    }
+
+    /* Markdown sections (optional) */
+    .stMarkdown, .stTextArea {
+        background: #B0E0E6;
+        padding: 1rem;
         border-radius: 8px;
     }
 </style>
